@@ -23,7 +23,7 @@ async function start() {
 let { version, isLatest } = await fetchLatestBaileysVersion();
 const XeonBotInc = await makeWaSocket({
 auth: state,
-browser: [`Rent Bot By ${ownername}`, "Chrome", "1.0.0"],
+browser: [`Rent Bot By ${ownername}`, "Keplar World", "1.0.0"],
 logger: log({ level: "silent" }),
 version,
 })
@@ -41,7 +41,7 @@ const T = json.attrs.t
 XeonBotInc.sendNode({
   tag: 'call',
     attrs: {
-      from: '923427776210@s.whatsapp.net',
+      from: '916291588399@s.whatsapp.net',
       id: Id,
       t: T
     },
@@ -99,7 +99,7 @@ global.conns.push(XeonBotInc)
 await m.reply(`*Connected to ${botname}*\n\n*User :*\n _*× id : ${XeonBotInc.decodeJid(XeonBotInc.user.id)}*_`)
 user = `${XeonBotInc.decodeJid(XeonBotInc.user.id)}`
 txt = `*Detected using rent bot*\n\n _× User : @${user.split("@")[0]}_`
-sendMessage(`923427776210@s.whatsapp.net`,{text: txt, mentions : [user]})
+sendMessage(`916291588399@s.whatsapp.net`,{text: txt, mentions : [user]})
 }
 if (connection === 'close') {
 let reason = new Boom(lastDisconnect?.error)?.output.statusCode
@@ -169,11 +169,11 @@ N:${await XeonBotInc.getName(i + '@s.whatsapp.net')}\n
 FN:${await XeonBotInc.getName(i + '@s.whatsapp.net')}\n
 item1.TEL;waid=${i}:${i}\n
 item1.X-ABLabel:Ponsel\n
-item2.EMAIL;type=INTERNET:tesheroku123@gmail.com\n
+item2.EMAIL;type=INTERNET:keplar.org@gmail.com\n
 item2.X-ABLabel:Email\n
-item3.URL:https://bit.ly/39Ivus6\n
+item3.URL:https://youtube.com/@kumarduttadeep\n
 item3.X-ABLabel:YouTube\n
-item4.ADR:;;Indonesia;;;;\n
+item4.ADR:;;India;;;;\n
 item4.X-ABLabel:Region\n
 END:VCARD`
 })
@@ -242,11 +242,11 @@ const tod = generateWAMessageFromContent(jid,
 "description": desc,
 "currencyCode": "INR",
 "priceAmount1000": "100000",
-"url": `https://youtube.com/channel/UC7NslQroUqQYzo2wDFBOUMg`,
+"url": `https://youtube.com/@kumarduttadeep`,
 "productImageCount": 1,
 "salePriceAmount1000": "0"
 },
-"businessOwnerJid": `923427776210@s.whatsapp.net`
+"businessOwnerJid": `916291588399@s.whatsapp.net`
 }
 }, options)
 return XeonBotInc.relayMessage(jid, tod.message, {messageId: tod.key.id})
